@@ -1,0 +1,51 @@
+BlueChi:
+    type: branch
+    description: System managed by BlueChi
+
+BlueChi.ManagedECU:
+    type: struct
+    description: An ECU in the car
+
+BlueChi.ManagedECU.Name:
+    datatype: string
+    type: property
+    description: The name of the ECU
+
+BlueChi.ManagedECU.Status:
+    datatype: string
+    type: property
+    description: The name of the ECU
+    allowed: ['online', 'offline']
+    default: 'offline'
+
+BlueChi.ManagedECU.ServiceList:
+    datatype: BlueChi.ManagedService[]
+    type: property
+    description: All services managed by BlueChi on the ECU
+    default: []
+
+BlueChi.ManagedService:
+    type: struct
+    description: An available service on a managed ECU
+
+BlueChi.ManagedService.Name:
+    datatype: string
+    type: property
+    description: Name of the service
+
+BlueChi.ManagedService.State:
+    datatype: string
+    type: property
+    description: State the service is currently in
+
+BlueChi.ManagedService.SubState:
+    datatype: string
+    type: property
+    description: SubState the service is currently in
+
+
+BlueChi.ManagedECUList:
+    datatype: BlueChi.ManagedECU[]
+    type: property
+    description: All ECUs managed by BlueChi
+    default: []
