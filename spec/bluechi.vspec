@@ -43,9 +43,8 @@ BlueChi.ManagedService.SubState:
     type: property
     description: SubState the service is currently in
 
-
 BlueChi.ManagedECUList:
     datatype: BlueChi.ManagedECU[]
-    type: property
+    type: attribute
     description: All ECUs managed by BlueChi
     default: []

@@ -1,0 +1,3 @@
+[submodule "submodule/kuksa"]
+	path = submodule/kuksa
+	url = git@github.com:engelmi/kuksa-databroker.git

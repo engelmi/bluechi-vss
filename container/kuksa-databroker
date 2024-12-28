@@ -1,0 +1,6 @@
+FROM ghcr.io/eclipse-kuksa/kuksa-databroker:main
+
+COPY ./spec/bluechi.json vss.json
+ENV KUKSA_DATABROKER_METADATA_FILE=vss.json
+
+ENTRYPOINT [ "/app/databroker" ]

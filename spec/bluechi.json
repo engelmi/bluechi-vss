@@ -1,0 +1,60 @@
+{
+    "BlueChi": {
+        "children": {
+            "ManagedECU": {
+                "children": {
+                    "Name": {
+                        "datatype": "string",
+                        "description": "The name of the ECU",
+                        "type": "property"
+                    },
+                    "ServiceList": {
+                        "datatype": "BlueChi.ManagedService[]",
+                        "description": "All services managed by BlueChi on the ECU",
+                        "type": "property"
+                    },
+                    "Status": {
+                        "allowed": [
+                            "online",
+                            "offline"
+                        ],
+                        "datatype": "string",
+                        "default": "offline",
+                        "description": "The name of the ECU",
+                        "type": "property"
+                    }
+                },
+                "description": "An ECU in the car",
+                "type": "struct"
+            },
+            "ManagedECUList": {
+                "datatype": "BlueChi.ManagedECU[]",
+                "description": "All ECUs managed by BlueChi",
+                "type": "attribute"
+            },
+            "ManagedService": {
+                "children": {
+                    "Name": {
+                        "datatype": "string",
+                        "description": "Name of the service",
+                        "type": "property"
+                    },
+                    "State": {
+                        "datatype": "string",
+                        "description": "State the service is currently in",
+                        "type": "property"
+                    },
+                    "SubState": {
+                        "datatype": "string",
+                        "description": "SubState the service is currently in",
+                        "type": "property"
+                    }
+                },
+                "description": "An available service on a managed ECU",
+                "type": "struct"
+            }
+        },
+        "description": "System managed by BlueChi",
+        "type": "branch"
+    }
+}
