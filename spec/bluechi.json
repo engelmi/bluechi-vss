@@ -1,16 +1,16 @@
 {
     "BlueChi": {
         "children": {
-            "ManagedECU": {
+            "ManagedNode": {
                 "children": {
                     "Name": {
                         "datatype": "string",
-                        "description": "The name of the ECU",
+                        "description": "The name of the Node",
                         "type": "property"
                     },
                     "ServiceList": {
                         "datatype": "BlueChi.ManagedService[]",
-                        "description": "All services managed by BlueChi on the ECU",
+                        "description": "All services managed by BlueChi on the Node",
                         "type": "property"
                     },
                     "Status": {
@@ -20,16 +20,16 @@
                         ],
                         "datatype": "string",
                         "default": "offline",
-                        "description": "The name of the ECU",
+                        "description": "The name of the Node",
                         "type": "property"
                     }
                 },
-                "description": "An ECU in the car",
+                "description": "An Node in the car",
                 "type": "struct"
             },
-            "ManagedECUList": {
-                "datatype": "BlueChi.ManagedECU[]",
-                "description": "All ECUs managed by BlueChi",
+            "ManagedNodeList": {
+                "datatype": "BlueChi.ManagedNode[]",
+                "description": "All Nodes managed by BlueChi",
                 "type": "attribute"
             },
             "ManagedService": {
@@ -50,7 +50,7 @@
                         "type": "property"
                     }
                 },
-                "description": "An available service on a managed ECU",
+                "description": "An available service on a managed Node",
                 "type": "struct"
             }
         },
